@@ -1,0 +1,70 @@
+/* Footer Styles */
+.footer {
+  background-color: #97e3ad; /* Blue background */
+  color: #032c14; /* White text */
+  padding: 30px;
+  text-align: center;
+}
+
+.footer .contact-info, 
+.footer .map, 
+.footer .footer-bottom {
+  margin-bottom: 20px;
+}
+
+.footer .contact-info h3,
+.footer .map h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer .contact-info p,
+.footer .footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer .contact-info a {
+  color: #1bc24a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer .contact-info a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer .map iframe {
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Footer Links */
+.footer a {
+  color: #1bc24a; /* Light green */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer .footer-bottom a::before {
+  content: '🌐 '; /* Placeholder for icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer .map iframe {
+    height: 150px;
+  }
+}

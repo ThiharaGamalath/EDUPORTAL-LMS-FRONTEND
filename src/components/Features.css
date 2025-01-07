@@ -1,0 +1,125 @@
+/* General Section Styling */
+.features,
+.news,
+.faq {
+  padding: 60px 20px;
+  background: #c6f2c5;
+  margin-bottom: 0px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Features Section */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover img {
+  transform: scale(1.1);
+}
+
+.feature-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.learn-more-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #69ca89;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #05a743;
+}
+
+/* News Section */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  box-shadow: 0 8px 16px rgba(3, 35, 3, 0.2);
+}
+
+.news-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #078559;
+}
+
+.news-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.news-card p strong {
+  color: #1bc24a;
+}
+
+/* FAQ Section */
+.faq-list details {
+  margin-bottom: 20px;
+}
+
+details summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #085106;
+  transition: color 0.3s ease;
+}
+
+details:hover summary {
+  color: #4bda9c;
+}
+
+details p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #7f8c8d;
+}

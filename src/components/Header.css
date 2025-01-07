@@ -1,0 +1,138 @@
+/* Base Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9ad8a7; /* Light blue background */
+  color: #0a0a15; /* Dark text */
+  padding: 10px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .logo h1 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  color: #058128; /* Light green text */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #a76f6f; /* Hover color */
+  text-decoration: underline;
+}
+
+.navbar ul li a:focus {
+  outline: 2px solid #fff; /* Accessibility focus outline */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 999; /* Keep hamburger icon above other elements */
+  transition: transform 0.3s ease;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #db1414; /* Red bars */
+  margin: 2px 0; /* Consistent spacing */
+  transition: all 0.3s ease;
+}
+
+/* Transform Hamburger to Close Icon when Active */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Active state for the navbar */
+.navbar.active {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 998; /* Place below the hamburger menu */
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.navbar.active ul {
+  display: block;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  /* Slide-in Animation for Navigation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 769px) {
+  .navbar ul {
+    display: flex;
+    gap: 30px;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+}
+
+/* Accessibility Enhancements */
+.hamburger:focus {
+  outline: 2px solid #058128; /* Focus outline for the hamburger menu */
+}
